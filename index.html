@@ -4,59 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Nord-Montage GbR Rostock | Sanierung von Wasser-, Brand-, Schimmel- & Sturmschäden</title>
-    <meta name="description" content="Nord-Montage GbR aus Rostock: professionelle Sanierung von Wasser-, Brand-, Schimmel- & Sturmschäden. Technische Trocknung, Leckortung und alle Gewerke aus einer Hand.">
+    <link rel="canonical" href="https://www.nord-montage.de/">
+    <title>Sanierung &amp; Trocknung Rostock | Nord-Montage GbR – Wasser-, Brand- &amp; Schimmelschäden</title>
+    <meta name="description" content="Nord-Montage GbR: Sanierung von Wasser-, Brand-, Schimmel- & Sturmschäden, technische Trocknung und Leckortung in Rostock, im Landkreis Rostock und ganz Mecklenburg-Vorpommern. Alle Gewerke aus einer Hand.">
+    <meta name="keywords" content="Sanierung Rostock, Wasserschadensanierung Rostock, Bautrocknung Rostock, Leckortung, Brandschadensanierung, Schimmelsanierung, Trocknungsfirma Mecklenburg-Vorpommern, Landkreis Rostock">
+    <meta name="geo.region" content="DE-MV">
+    <meta name="geo.placename" content="Rostock">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Nord-Montage GbR">
+    <meta property="og:title" content="Sanierung & Trocknung in Rostock & MV | Nord-Montage GbR">
+    <meta property="og:description" content="Wasser-, Brand-, Schimmel- & Sturmschäden, technische Trocknung und Leckortung – alle Gewerke aus einer Hand in Rostock und Mecklenburg-Vorpommern.">
+    <meta property="og:image" content="assets/img/hero-fassade.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: { extend: {
                 colors: { 'navy':'#111F55','navy-2':'#1b2c74','cream':'#f6f6f4','signal':'#cd111f','ink':'#0e1633','stone':'#7f838b' },
-                fontFamily: { 'display':['"Space Grotesk"','sans-serif'], 'sans':['Inter','sans-serif'] }
+                fontFamily: { 'display':['Ubuntu','sans-serif'], 'sans':['Ubuntu','sans-serif'] }
             }}
         }
     </script>
 
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; }
-        .font-display { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
-        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
-        .fade-up.in { opacity: 1; transform: translateY(0); }
-        .btn-arrow svg { transition: transform .25s ease; }
-        .btn-arrow:hover svg { transform: translate(3px,-3px); }
-        .svc-row { transition: background-color .25s ease; }
-        .svc-row:hover { background-color:#fff; }
+        body { font-family: 'Ubuntu', sans-serif; }
+        .font-display { font-family: 'Ubuntu', sans-serif; }
+        .fade-up { opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
+        .fade-up.in { opacity:1; transform:translateY(0); }
+        .btn-arrow svg { transition:transform .25s ease; }
+        .btn-arrow:hover svg { transform:translate(3px,-3px); }
+        .brush { color:#cd111f; display:block; height:14px; width:96px; }
+        .svc-card { transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+        .svc-card:hover { transform:translateY(-6px); box-shadow:0 24px 48px -24px rgba(17,31,85,.4); border-color:#cd111f; }
+        .col-img { transition:transform .5s ease; }
+        .col-tile:hover .col-img { transform:scale(1.06); }
         .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
-        .col-img { transition: transform .5s ease; }
-        .col-tile:hover .col-img { transform: scale(1.06); }
-        /* Vorher/Nachher-Wischregler */
+        /* Foto-Mosaik */
+        .mosaic { display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:44vw; gap:4px; }
+        @media (min-width:768px){ .mosaic{ grid-template-columns:repeat(4,1fr); grid-auto-rows:14vw; } }
+        .m-tile { position:relative; overflow:hidden; }
+        .m-tile img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+        .m-tile:hover img { transform:scale(1.07); }
+        .m-tile figcaption { position:absolute; inset-inline:0; bottom:0; padding:.6rem .75rem; font-size:12px; font-weight:500; color:#fff; background:linear-gradient(to top, rgba(17,31,85,.88), transparent); opacity:0; transition:opacity .3s ease; }
+        .m-tile:hover figcaption { opacity:1; }
+        .m-tall { grid-row:span 2; }
+        @media (max-width:767px){ .m-tall{ grid-row:span 1; } }
+        /* Vorher/Nachher */
         .ba { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:.75rem; user-select:none; --pos:50%; }
         .ba img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
         .ba .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
         .ba .ba-line { position:absolute; top:0; bottom:0; left:var(--pos); width:3px; background:#fff; transform:translateX(-50%); pointer-events:none; box-shadow:0 0 0 1px rgba(0,0,0,.15); }
         .ba .ba-handle { position:absolute; top:50%; left:var(--pos); width:46px; height:46px; border-radius:9999px; background:#cd111f; transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.35); pointer-events:none; }
         .ba .ba-range { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; }
-        .ba .ba-tag { position:absolute; top:12px; padding:4px 10px; border-radius:4px; font-size:12px; font-weight:600; letter-spacing:.03em; color:#fff; pointer-events:none; }
+        .ba .ba-tag { position:absolute; top:12px; padding:4px 10px; border-radius:4px; font-size:12px; font-weight:500; color:#fff; pointer-events:none; }
         .ba .ba-tag-v { left:12px; background:rgba(14,22,51,.85); }
         .ba .ba-tag-n { right:12px; background:rgba(205,17,31,.9); }
-        /* Foto-Mosaik (randlos, Masonry) */
-        .mosaic { display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:44vw; gap:4px; }
-        @media (min-width:768px){ .mosaic{ grid-template-columns:repeat(4,1fr); grid-auto-rows:15vw; } }
-        .m-tile { position:relative; overflow:hidden; }
-        .m-tile img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
-        .m-tile:hover img { transform:scale(1.07); }
-        .m-tile figcaption { position:absolute; inset-inline:0; bottom:0; padding:.6rem .75rem; font-size:12px; font-weight:600; color:#fff; background:linear-gradient(to top, rgba(17,31,85,.85), transparent); opacity:0; transition:opacity .3s ease; }
-        .m-tile:hover figcaption { opacity:1; }
-        .m-tall { grid-row:span 2; }
-        @media (max-width:767px){ .m-tall{ grid-row:span 1; } }
-        /* Pinselstrich */
         .brush-bg { position:absolute; z-index:0; pointer-events:none; }
     </style>
+
+    <!-- SEO: LocalBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"HomeAndConstructionBusiness",
+      "name":"Nord-Montage GbR",
+      "description":"Sanierung von Wasser-, Brand-, Schimmel- und Sturmschäden, technische Trocknung und Leckortung in Rostock, im Landkreis Rostock und in Mecklenburg-Vorpommern.",
+      "image":"https://www.nord-montage.de/",
+      "url":"https://www.nord-montage.de/",
+      "telephone":"+4938151056333",
+      "email":"info@nord-montage.de",
+      "address":{"@type":"PostalAddress","streetAddress":"Albert-Schweitzer-Str. 24a","postalCode":"18147","addressLocality":"Rostock","addressRegion":"Mecklenburg-Vorpommern","addressCountry":"DE"},
+      "geo":{"@type":"GeoCoordinates","latitude":54.1449,"longitude":12.1690},
+      "areaServed":[{"@type":"City","name":"Rostock"},{"@type":"AdministrativeArea","name":"Landkreis Rostock"},{"@type":"State","name":"Mecklenburg-Vorpommern"}],
+      "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"17:00"}],
+      "priceRange":"€€"
+    }
+    </script>
+    <!-- SEO: JobPosting -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"JobPosting",
+      "title":"Trocknungstechniker (m/w/d)",
+      "description":"Bedienung von Trocknungsgeräten, Feuchtigkeitsmessungen, Überwachung der Trocknungsprozesse sowie Kundenberatung vor Ort bei Nord-Montage GbR in Rostock.",
+      "datePosted":"2026-01-15",
+      "employmentType":"FULL_TIME",
+      "hiringOrganization":{"@type":"Organization","name":"Nord-Montage GbR","sameAs":"https://www.nord-montage.de/"},
+      "jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","streetAddress":"Albert-Schweitzer-Str. 24a","postalCode":"18147","addressLocality":"Rostock","addressRegion":"Mecklenburg-Vorpommern","addressCountry":"DE"}}
+    }
+    </script>
+    <!-- SEO: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Übernehmen Sie alle Gewerke selbst?","acceptedAnswer":{"@type":"Answer","text":"Ja. Unser Team führt alle erforderlichen Handwerksarbeiten selbst aus – von der Trocknung über Sanitär, Fassade und Boden bis zur Wiederherstellung."}},
+      {"@type":"Question","name":"In welchem Gebiet sind Sie tätig?","acceptedAnswer":{"@type":"Answer","text":"Wir sind in Rostock, im gesamten Landkreis Rostock und in ganz Mecklenburg-Vorpommern für Sie im Einsatz."}},
+      {"@type":"Question","name":"Wie schnell können Sie bei einem Wasserschaden vor Ort sein?","acceptedAnswer":{"@type":"Answer","text":"Melden Sie den Schaden telefonisch – wir stimmen umgehend einen Termin zur Begutachtung und zur sofortigen technischen Trocknung ab."}},
+      {"@type":"Question","name":"Was kostet eine Erstberatung?","acceptedAnswer":{"@type":"Answer","text":"Wir erstellen Ihnen ein kostenloses Angebot. Sprechen Sie uns telefonisch, per E-Mail oder über das Kontaktformular an."}}]
+    }
+    </script>
 </head>
 <body class="bg-white text-ink antialiased">
 
@@ -65,11 +118,11 @@
         <div class="max-w-7xl mx-auto flex justify-between items-center px-8 py-2.5">
             <span class="flex items-center gap-2">
                 <svg class="w-4 h-4 text-signal" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                Albert-Schweitzer-Str. 24a · 18147 Rostock
+                Rostock · Landkreis Rostock · ganz Mecklenburg-Vorpommern
             </span>
             <div class="flex items-center gap-6">
                 <a href="mailto:info@nord-montage.de" class="hover:text-white transition">info@nord-montage.de</a>
-                <a href="tel:+4938151056333" class="font-semibold hover:text-white transition">0381 51 05 63 33</a>
+                <a href="tel:+4938151056333" class="font-medium hover:text-white transition">0381 51 05 63 33</a>
             </div>
         </div>
     </div>
@@ -77,279 +130,265 @@
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-ink/10">
         <div class="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-8 py-3.5">
-            <a href="#start" class="flex items-center gap-3">
-                <!-- NM Hausdach-Logo -->
+            <a href="#start" class="flex items-center gap-3" aria-label="Nord-Montage GbR Startseite">
                 <svg class="w-11 h-11 shrink-0" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                     <path d="M4 22 L24 5 L44 22" stroke="#cd111f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
                     <rect x="9" y="21" width="30" height="19" rx="2.5" fill="#111F55"/>
-                    <text x="24" y="35" fill="#fff" font-size="12.5" font-weight="700" text-anchor="middle" font-family="Space Grotesk, sans-serif">NM</text>
+                    <text x="24" y="35" fill="#fff" font-size="12.5" font-weight="700" text-anchor="middle" font-family="Ubuntu, sans-serif">NM</text>
                 </svg>
                 <span class="font-display text-xl md:text-2xl font-bold tracking-tight leading-none text-navy">Nord-<span class="text-signal">Montage</span></span>
             </a>
-
-            <nav class="hidden lg:flex items-center gap-8 font-medium text-[15px] text-ink/80">
-                <a href="#leistungen" class="hover:text-signal transition">Leistungsprofil</a>
+            <nav class="hidden lg:flex items-center gap-7 font-medium text-[15px] text-ink/80">
+                <a href="#leistungen" class="hover:text-signal transition">Leistungen</a>
                 <a href="#vorher-nachher" class="hover:text-signal transition">Vorher / Nachher</a>
                 <a href="#referenzen" class="hover:text-signal transition">Referenzen</a>
-                <a href="#anfahrt" class="hover:text-signal transition">Anfahrt</a>
+                <a href="#stellen" class="hover:text-signal transition">Stellenangebote</a>
                 <a href="#kontakt" class="hover:text-signal transition">Kontakt</a>
             </nav>
-
             <a href="#kontakt" class="btn-arrow hidden sm:inline-flex items-center gap-2 bg-signal text-white pl-5 pr-4 py-2.5 rounded font-medium text-sm hover:bg-red-700 transition">
-                Kontaktieren Sie uns
+                Kontakt aufnehmen
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
             </a>
-
-            <button id="burger" class="lg:hidden text-navy" aria-label="Menü">
+            <button id="burger" class="lg:hidden text-navy" aria-label="Menü öffnen">
                 <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
         <div id="mobile-menu" class="lg:hidden hidden border-t border-ink/10 bg-white">
             <nav class="flex flex-col px-6 py-4 font-medium">
-                <a href="#leistungen" class="py-3 border-b border-ink/5">Leistungsprofil</a>
+                <a href="#leistungen" class="py-3 border-b border-ink/5">Leistungen</a>
+                <a href="#vorher-nachher" class="py-3 border-b border-ink/5">Vorher / Nachher</a>
                 <a href="#referenzen" class="py-3 border-b border-ink/5">Referenzen</a>
-                <a href="#faq" class="py-3 border-b border-ink/5">FAQ</a>
-                <a href="#anfahrt" class="py-3 border-b border-ink/5">Anfahrt</a>
+                <a href="#stellen" class="py-3 border-b border-ink/5">Stellenangebote</a>
                 <a href="#kontakt" class="py-3">Kontakt</a>
             </nav>
         </div>
     </header>
 
     <!-- Hero -->
-    <section id="start" class="relative bg-navy text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-[0.12]" style="background-image:url('assets/img/hero-fassade.jpg');background-size:cover;background-position:center;"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-navy via-navy/95 to-navy"></div>
-        <div class="relative max-w-7xl mx-auto px-6 md:px-8 pt-20 md:pt-24 pb-0">
+    <section id="start" class="bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 pt-16 md:pt-24 pb-14">
             <div class="max-w-4xl">
-                <span class="inline-flex items-center gap-2 text-white/70 font-semibold uppercase tracking-[0.22em] text-xs mb-6">
-                    <span class="w-6 h-px bg-signal"></span> Sanierung &amp; Trocknung · Rostock
+                <span class="inline-flex items-center gap-2 text-signal font-medium uppercase tracking-[0.2em] text-xs mb-5">
+                    <span class="w-6 h-px bg-signal"></span> Sanierung · Trocknung · Handwerk · Rostock &amp; MV
                 </span>
-                <h1 class="font-display text-4xl md:text-6xl lg:text-[4.3rem] font-bold leading-[1.02] uppercase mb-7">
-                    Professionelle Sanierung von <span class="text-signal">Wasser-, Brand-, Schimmel-</span> &amp; Sturmschäden
+                <h1 class="font-display text-4xl md:text-6xl font-bold leading-[1.05] text-navy mb-4">
+                    Sanierung von Wasser-, Brand-, Schimmel- &amp; Sturmschäden in <span class="text-signal">Rostock</span>
                 </h1>
-                <p class="text-lg md:text-xl text-white/75 leading-relaxed max-w-2xl mb-9">
-                    Wir übernehmen <strong class="text-white">alles</strong> – von der technischen Trocknung bis zur
-                    vollständigen Sanierung. Alle Gewerke aus einer Hand.
+                <svg class="brush mb-7" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
+                <p class="text-lg md:text-xl text-ink/70 leading-relaxed max-w-2xl mb-9">
+                    Nord-Montage GbR übernimmt <strong class="text-navy">alle Gewerke aus einer Hand</strong> – von der
+                    technischen Trocknung bis zur vollständigen Wiederherstellung. Für Privat und Gewerbe in Rostock,
+                    im Landkreis Rostock und in ganz Mecklenburg-Vorpommern.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 mb-14">
-                    <a href="tel:+4938151056333" class="btn-arrow inline-flex items-center justify-center gap-2 bg-signal text-white px-7 py-4 rounded font-semibold hover:bg-red-700 transition">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:+4938151056333" class="btn-arrow inline-flex items-center justify-center gap-2 bg-signal text-white px-7 py-4 rounded font-medium hover:bg-red-700 transition">
                         Schaden melden
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
                     </a>
-                    <a href="#leistungen" class="inline-flex items-center justify-center gap-2 border border-white/25 text-white px-7 py-4 rounded font-semibold hover:bg-white hover:text-navy transition">
-                        Leistungen ansehen
+                    <a href="#leistungen" class="inline-flex items-center justify-center gap-2 border border-navy/20 text-navy px-7 py-4 rounded font-medium hover:bg-navy hover:text-white transition">
+                        Unsere Leistungen
                     </a>
                 </div>
             </div>
         </div>
-        <!-- Foto-Band, halb überlappend -->
-        <div class="relative max-w-7xl mx-auto px-6 md:px-8">
-            <div class="rounded-t-2xl overflow-hidden border-t-4 border-signal -mb-1">
-                <img src="assets/img/hero-fassade.jpg" alt="Nord-Montage im Einsatz – Sanierungs- und Handwerksarbeiten" class="w-full h-[240px] md:h-[420px] object-cover">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="rounded-xl overflow-hidden border-b-4 border-signal">
+                <img src="assets/img/hero-fassade.jpg" alt="Nord-Montage GbR bei Sanierungsarbeiten in Rostock" class="w-full h-[260px] md:h-[440px] object-cover">
             </div>
         </div>
     </section>
 
-    <!-- Was uns unterscheidet (Infobox wie Original) -->
-    <section class="bg-white">
+    <!-- Leistungen (prominent, Icon-Grid) -->
+    <section id="leistungen" class="bg-cream border-y border-ink/5">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
-            <div class="grid lg:grid-cols-12 gap-10 items-start">
-                <div class="lg:col-span-5 fade-up">
-                    <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Was uns unterscheidet</span>
-                    <h2 class="font-display text-3xl md:text-4xl font-bold text-navy mt-4 leading-tight uppercase">Alle Handwerks&shy;arbeiten selbst durchführen</h2>
+            <div class="max-w-2xl mb-14 fade-up">
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Leistungen</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-3 leading-tight">Alles rund um Sanierung &amp; Trocknung</h2>
+                <svg class="brush mt-4" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
+                <p class="text-ink/70 text-lg mt-5">Von der Schadensbeseitigung bis zur kompletten Wiederherstellung – alle Gewerke aus einer Hand für Rostock und Mecklenburg-Vorpommern.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <article class="svc-card bg-white rounded-xl p-7 border border-ink/10 fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.25c-4 4.5-6.75 8-6.75 11.25a6.75 6.75 0 0013.5 0c0-3.25-2.75-6.75-6.75-11.25z"/></svg></div>
+                    <h3 class="font-display text-xl font-bold text-navy mb-2">Wasserschaden­sanierung</h3>
+                    <p class="text-ink/70">Nach Rohrbruch oder Wasserschaden in Rostock: Sofortmaßnahmen, technische Trocknung und vollständige Sanierung – inkl. Wiederherstellung.</p>
+                </article>
+                <article class="svc-card bg-white rounded-xl p-7 border border-ink/10 fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div>
+                    <h3 class="font-display text-xl font-bold text-navy mb-2">Technische Trocknung &amp; Leckortung</h3>
+                    <p class="text-ink/70">Bautrocknung von Wänden und Böden, komplette Raumtrocknung sowie Leckageortung per Thermografie und Feuchtemessung.</p>
+                </article>
+                <article class="svc-card bg-white rounded-xl p-7 border border-ink/10 fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/></svg></div>
+                    <h3 class="font-display text-xl font-bold text-navy mb-2">Brand- &amp; Schimmel­sanierung</h3>
+                    <p class="text-ink/70">Beseitigung von Brand- und Schimmelschäden, desinfizierende Reinigung, Geruchsneutralisation und fachgerechter Wiederaufbau.</p>
+                </article>
+                <article class="svc-card bg-white rounded-xl p-7 border border-ink/10 fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+                    <h3 class="font-display text-xl font-bold text-navy mb-2">Fassade, WDVS &amp; Dach</h3>
+                    <p class="text-ink/70">Fassaden- und Putzarbeiten, Wärmedämmverbundsysteme sowie Dachdeckerarbeiten – funktional, energiesparend und ästhetisch.</p>
+                </article>
+                <article class="svc-card bg-white rounded-xl p-7 border border-ink/10 fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8m-4-4v4m-5-9a5 5 0 0010 0V5a3 3 0 00-6 0"/></svg></div>
+                    <h3 class="font-display text-xl font-bold text-navy mb-2">Heizung &amp; Sanitär</h3>
+                    <p class="text-ink/70">Installation, Wartung und Reparatur von Heizungsanlagen sowie komplette Bäder und Sanitärinstallationen nach Ihren Wünschen.</p>
+                </article>
+                <article class="svc-card bg-white rounded-xl p-7 border border-ink/10 fade-up">
+                    <div class="w-12 h-12 rounded-lg bg-navy/5 flex items-center justify-center mb-5"><svg class="w-6 h-6 text-navy" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z"/><path stroke-linecap="round" stroke-linejoin="round" d="M4 10h16M10 4v16"/></svg></div>
+                    <h3 class="font-display text-xl font-bold text-navy mb-2">Boden, Fliesen, Maler &amp; Holzbau</h3>
+                    <p class="text-ink/70">Bodenbeläge, Fliesen- und Malerarbeiten, Trockenbau, Innenausbau, Fenster- &amp; Türmontage sowie Carports aus Holz.</p>
+                </article>
+            </div>
+
+            <div class="mt-10 flex flex-wrap items-center gap-3 fade-up">
+                <span class="text-ink/50 text-sm mr-2">Außerdem:</span>
+                <span class="border border-ink/15 rounded-full px-4 py-1.5 text-sm bg-white">Trockenbau</span>
+                <span class="border border-ink/15 rounded-full px-4 py-1.5 text-sm bg-white">Innenausbau</span>
+                <span class="border border-ink/15 rounded-full px-4 py-1.5 text-sm bg-white">Fassadenanstrich</span>
+                <span class="border border-ink/15 rounded-full px-4 py-1.5 text-sm bg-white">Fenster- &amp; Türmontage</span>
+                <span class="border border-ink/15 rounded-full px-4 py-1.5 text-sm bg-white">Laminat verlegen</span>
+                <span class="border border-ink/15 rounded-full px-4 py-1.5 text-sm bg-white">Carport</span>
+            </div>
+            <p class="text-ink/70 mt-8 fade-up">Gerne erstellen wir Ihnen ein <strong class="text-navy">kostenloses Angebot</strong>. Wir sind für Sie in Rostock und Umgebung im Einsatz.</p>
+        </div>
+    </section>
+
+    <!-- Leistungsprofil: Detailblöcke mit Foto-Collagen -->
+    <section class="bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 space-y-20 md:space-y-28">
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/5] row-span-2"><img src="assets/img/ref-mauerwerk.jpg" alt="Mauerwerkssanierung nach Schaden" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/mos-thermografie.jpg" alt="Feuchtemessung und Leckortung" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-arbeiten.jpg" alt="Sanierungsarbeiten Nord-Montage" class="col-img w-full h-full object-cover"></div>
                 </div>
-                <div class="lg:col-span-7 fade-up">
-                    <div class="bg-navy text-white rounded-2xl p-8 md:p-10">
-                        <p class="text-lg leading-relaxed text-white/85">
-                            Der Vorteil für Sie als Kunde: Wir bieten <strong class="text-white">alle erforderlichen Arbeiten aus einer Hand</strong>.
-                            Unser Team besteht aus qualifizierten Handwerkern mit langjähriger Erfahrung in der Branche.
-                            Sie müssen sich nicht um die Koordination verschiedener Gewerke kümmern – von der Trocknung
-                            bis zur vollständigen Wiederherstellung liegt alles in einer Verantwortung.
-                        </p>
-                        <div class="mt-8 grid grid-cols-3 gap-4 text-center">
-                            <div><div class="font-display text-3xl font-bold text-signal">12+</div><div class="text-white/60 text-sm mt-1">Leistungen</div></div>
-                            <div><div class="font-display text-3xl font-bold text-signal">100%</div><div class="text-white/60 text-sm mt-1">aus einer Hand</div></div>
-                            <div><div class="font-display text-3xl font-bold text-signal">0€</div><div class="text-white/60 text-sm mt-1">Erstangebot</div></div>
-                        </div>
+                <div>
+                    <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Sanierung &amp; Trocknung</span>
+                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight">Wasser-, Brand-, Sturm- &amp; Schimmelschäden</h3>
+                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Nach Beseitigung des Schadens bieten wir umfassende Sanierungsleistungen an. Unser Ziel ist es, Ihre Immobilie wieder in den ursprünglichen Zustand zu versetzen – inkl. Trocknung von Wänden und Böden, kompletter Raumtrocknung, Demontage, desinfizierender Reinigung und Wiederherstellung.</p>
+                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-medium hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
+                <div class="lg:order-2 grid grid-cols-2 gap-3">
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-fassade-farbanstrich.jpg" alt="Fassade mit Farbanstrich in Rostock" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/mos-dach.jpg" alt="Dachdeckerarbeiten" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[8/5] col-span-2"><img src="assets/img/mos-fassade.jpg" alt="Fassadenarbeiten mit WDVS" class="col-img w-full h-full object-cover"></div>
+                </div>
+                <div class="lg:order-1">
+                    <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Gebäudehülle</span>
+                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight">Fassade, WDVS &amp; Dachdeckerarbeiten</h3>
+                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Wir sind Ihr zuverlässiger Partner für hochwertige Fassaden- und Putzarbeiten sowie Wärmedämmverbundsysteme in Rostock und MV. Eine gute Dämmung reduziert den Energieverbrauch und erhöht den Wohnkomfort – funktional und ästhetisch ansprechend.</p>
+                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-medium hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/mos-sanitaer.jpg" alt="Sanitärinstallation" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/mos-heizung.jpg" alt="Heizungsmontage" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-bad.jpg" alt="Bad-Sanierung" class="col-img w-full h-full object-cover"></div>
+                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/mos-bad1.jpg" alt="Badezimmer" class="col-img w-full h-full object-cover"></div>
+                </div>
+                <div>
+                    <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Innen</span>
+                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight">Heizung, Sanitär, Boden, Fliesen &amp; Maler</h3>
+                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Von Heizungs- und Sanitärtechnik über Bäder bis zu Bodenbelägen, Fliesen-, Maler- und Trockenbauarbeiten: Wir gestalten Innenräume komplett – vom Waschbecken bis zur schlüsselfertigen Wohnung.</p>
+                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-medium hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Was uns unterscheidet / Fachkompetenz -->
+    <section class="bg-cream border-y border-ink/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-24 grid lg:grid-cols-12 gap-10 items-start">
+            <div class="lg:col-span-5 fade-up">
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Fachkompetenz &amp; Handwerkskunst</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold text-navy mt-3 leading-tight">Alles aus einer Hand – aus der Region für die Region</h2>
+                <svg class="brush mt-4" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
+            </div>
+            <div class="lg:col-span-7 fade-up">
+                <div class="bg-navy text-white rounded-2xl p-8 md:p-10">
+                    <p class="text-lg leading-relaxed text-white/85">
+                        Unser Familienbetrieb aus Rostock vereint Fachkompetenz und Handwerkskunst. Der Vorteil für Sie:
+                        Wir bieten <strong class="text-white">alle erforderlichen Arbeiten aus einer Hand</strong> und Sie müssen
+                        sich nicht um die Koordination verschiedener Gewerke kümmern. Unser Team besteht aus qualifizierten
+                        Handwerkern mit langjähriger Erfahrung – im Einsatz in Rostock, im Landkreis Rostock und in ganz
+                        Mecklenburg-Vorpommern.
+                    </p>
+                    <div class="mt-8 grid grid-cols-3 gap-4 text-center">
+                        <div><div class="font-display text-3xl font-bold text-signal">12+</div><div class="text-white/60 text-sm mt-1">Leistungen</div></div>
+                        <div><div class="font-display text-3xl font-bold text-signal">100%</div><div class="text-white/60 text-sm mt-1">aus einer Hand</div></div>
+                        <div><div class="font-display text-3xl font-bold text-signal">MV</div><div class="text-white/60 text-sm mt-1">Einsatzgebiet</div></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Leistungen Übersicht (rote Banderole wie Original) -->
-    <section id="leistungen" class="bg-cream border-y border-ink/5">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
-            <div class="inline-flex items-center gap-3 bg-signal text-white font-display font-semibold uppercase tracking-wide px-5 py-2.5 rounded mb-10 fade-up">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
-                Wir bieten Ihnen folgende Leistungen an
-            </div>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-4 fade-up">
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Sanierung von Wasser-, Brand-, Schimmel- &amp; Sturmschäden</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Technische Trocknung von Wänden &amp; Böden</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Thermografie / Leckageortung</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Heizung / Sanitär</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Trockenbau</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Innenausbau</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Fliesenarbeiten</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Bodenbeläge</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Malerarbeiten</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Holzbau / Carport</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Fassadenarbeiten / -anstrich, WDVS</div>
-                <div class="flex items-center gap-3 py-2 border-b border-ink/10"><span class="text-signal font-bold">›</span>Fenster- &amp; Türmontage</div>
-            </div>
-            <p class="text-ink/70 mt-8 fade-up">Gerne stehen wir Ihnen für Fragen zur Verfügung und erstellen Ihnen ein <strong class="text-navy">kostenloses Angebot</strong>.</p>
-        </div>
-    </section>
-
-    <!-- Leistungsprofil: Service-Blöcke mit Foto-Collagen -->
-    <section class="bg-white">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 space-y-20 md:space-y-28">
-
-            <!-- Block 1: Sanierung -->
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/5] row-span-2"><img src="assets/img/ref-mauerwerk.jpg" alt="Mauerwerk" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-treppe.jpg" alt="Treppensanierung" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-arbeiten.jpg" alt="Sanierungsarbeiten" class="col-img w-full h-full object-cover"></div>
-                </div>
-                <div>
-                    <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Leistungsprofil · 01</span>
-                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight uppercase">Sanierung von Wasser-, Brand-, Sturm- &amp; Schimmelschäden</h3>
-                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Nach Beseitigung des Schadens bieten wir umfassende Sanierungsleistungen an. Unser Ziel ist es, Ihre Immobilie wieder in den ursprünglichen Zustand zu versetzen. Dazu gehören die Trocknung von Wänden und Böden sowie komplette Raumtrocknung, Demontage, desinfizierende Reinigung und Wiederherstellung.</p>
-                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-semibold hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
-                </div>
-            </div>
-
-            <!-- Block 2: Fassade (Bilder rechts) -->
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
-                <div class="lg:order-2 grid grid-cols-2 gap-3">
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-fassade-farbanstrich.jpg" alt="Fassade mit Farbanstrich" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-wdvs.jpg" alt="WDVS" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[8/5] col-span-2"><img src="assets/img/ref-fassade-2.jpg" alt="Fassadenarbeiten" class="col-img w-full h-full object-cover"></div>
-                </div>
-                <div class="lg:order-1">
-                    <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Leistungsprofil · 02</span>
-                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight uppercase">Fassade, WDVS &amp; Dachdeckerarbeiten</h3>
-                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Wir sind Ihr zuverlässiger Partner für hochwertige Fassaden- und Putzarbeiten sowie WDVS. Unser Ziel ist es, Ihnen eine Fassade zu bieten, die nicht nur funktional, sondern auch ästhetisch ansprechend ist. Wärmedämmverbundsysteme reduzieren zudem den Energieverbrauch und erhöhen den Wohnkomfort.</p>
-                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-semibold hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
-                </div>
-            </div>
-
-            <!-- Block 3: Heizung & Sanitär -->
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-sanitaer-1.jpg" alt="Waschbecken" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-heizung.jpg" alt="Heizung" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-sanitaer-2.jpg" alt="Dusche / Armatur" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-bad.jpg" alt="Bad" class="col-img w-full h-full object-cover"></div>
-                </div>
-                <div>
-                    <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Leistungsprofil · 03</span>
-                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight uppercase">Heizungs- &amp; Sanitärarbeiten</h3>
-                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Wir bieten umfassende Dienstleistungen im Bereich Heizungs- und Sanitärtechnik: Installation, Wartung und Reparatur von Heizungsanlagen sowie Planung und Umsetzung von Sanitärinstallationen. Von Toiletten, Waschbecken und Duschen bis zur Verlegung von Rohrleitungen und Armaturen – wir sorgen dafür, dass alles reibungslos funktioniert.</p>
-                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-semibold hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
-                </div>
-            </div>
-
-            <!-- Block 4: Boden, Fliesen & Maler (Bilder rechts) -->
-            <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center fade-up">
-                <div class="lg:order-2 grid grid-cols-2 gap-3">
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[8/5] col-span-2"><img src="assets/img/ref-laminat.jpg" alt="Laminat verlegen" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-treppe-2.jpg" alt="Treppe" class="col-img w-full h-full object-cover"></div>
-                    <div class="col-tile overflow-hidden rounded-xl aspect-[4/3]"><img src="assets/img/ref-mauerwerk-2.jpg" alt="Mauerwerk" class="col-img w-full h-full object-cover"></div>
-                </div>
-                <div class="lg:order-1">
-                    <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Leistungsprofil · 04</span>
-                    <h3 class="font-display text-2xl md:text-4xl font-bold text-navy mt-3 mb-4 leading-tight uppercase">Bodenbelag-, Fliesen- &amp; Malerarbeiten</h3>
-                    <p class="text-ink/70 text-lg leading-relaxed mb-6">Wir bieten die Lieferung und professionelle Verlegung von Bodenbelägen sowie eine breite Palette von Dienstleistungen rund um Fliesen, Mosaik und Naturstein – mit garantiert professioneller Ausführung. Zudem verfügen wir über erfahrene Maler, die Ihnen hochwertige Malerarbeiten für Zuhause oder Unternehmen liefern.</p>
-                    <a href="#kontakt" class="btn-arrow inline-flex items-center gap-2 bg-signal text-white px-6 py-3 rounded font-semibold hover:bg-red-700 transition">Mehr Informationen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Zitat / Familienbetrieb (Pinselstrich) -->
+    <!-- Zitat (Pinselstrich) -->
     <section class="bg-navy text-white relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 md:px-8 py-24 md:py-28 text-center relative">
             <svg class="brush-bg left-1/2 top-1/2" style="transform:translate(-50%,-58%);width:min(760px,92%);height:auto;opacity:.9" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
                 <path d="M22,120 C70,58 190,52 320,72 C440,90 520,55 582,104 C566,158 430,168 300,150 C176,133 66,164 22,120 Z" fill="#cd111f" opacity="0.16"/>
             </svg>
-            <span class="relative text-signal font-semibold uppercase tracking-[0.22em] text-xs">Familienbetrieb aus Rostock</span>
-            <blockquote class="relative font-display text-2xl md:text-4xl font-semibold italic leading-snug mt-6">
+            <span class="relative text-signal font-medium uppercase tracking-[0.22em] text-xs">Familienbetrieb aus Rostock</span>
+            <blockquote class="relative font-display text-2xl md:text-4xl font-medium italic leading-snug mt-6">
                 „Wir vereinen alle Gewerke unter einem Dach – von der Trocknung bis zur Wiederherstellung. Damit Sie einen Ansprechpartner haben und wir für das Ergebnis geradestehen.“
             </blockquote>
             <div class="relative mt-9 flex items-center justify-center gap-4">
-                <span class="w-14 h-14 rounded-full overflow-hidden ring-2 ring-signal shrink-0">
-                    <img src="assets/img/ref-arbeiten.jpg" alt="Nord-Montage Team" class="w-full h-full object-cover">
-                </span>
-                <div class="text-left">
-                    <div class="font-semibold">Nord-Montage GbR</div>
-                    <div class="text-white/60 text-sm">Geschäftsführung · Rostock</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Prozess (dunkel) -->
-    <section class="bg-navy text-white border-t border-white/10">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
-            <div class="max-w-2xl mb-14 fade-up">
-                <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Ablauf</span>
-                <h2 class="font-display text-3xl md:text-5xl font-bold mt-4 leading-tight uppercase">Vom Schaden bis zum ursprünglichen Zustand</h2>
-            </div>
-            <div class="grid md:grid-cols-4 gap-x-8 gap-y-12">
-                <div class="fade-up"><div class="font-display text-signal text-sm font-bold tracking-widest mb-4">SCHRITT 01</div><h3 class="font-display text-xl font-bold mb-2">Kontakt &amp; Begutachtung</h3><p class="text-white/65">Sie melden den Schaden, wir verschaffen uns vor Ort einen Überblick.</p></div>
-                <div class="fade-up"><div class="font-display text-signal text-sm font-bold tracking-widest mb-4">SCHRITT 02</div><h3 class="font-display text-xl font-bold mb-2">Trocknung &amp; Ortung</h3><p class="text-white/65">Technische Trocknung, Feuchtemessung und Leckageortung per Thermografie.</p></div>
-                <div class="fade-up"><div class="font-display text-signal text-sm font-bold tracking-widest mb-4">SCHRITT 03</div><h3 class="font-display text-xl font-bold mb-2">Sanierung</h3><p class="text-white/65">Demontage, desinfizierende Reinigung und fachgerechte Sanierung.</p></div>
-                <div class="fade-up"><div class="font-display text-signal text-sm font-bold tracking-widest mb-4">SCHRITT 04</div><h3 class="font-display text-xl font-bold mb-2">Wiederherstellung</h3><p class="text-white/65">Alle Gewerke bis zur vollständigen, schlüsselfertigen Wiederherstellung.</p></div>
+                <span class="w-14 h-14 rounded-full overflow-hidden ring-2 ring-signal shrink-0"><img src="assets/img/ref-arbeiten.jpg" alt="Team von Nord-Montage" class="w-full h-full object-cover"></span>
+                <div class="text-left"><div class="font-medium">Nord-Montage GbR</div><div class="text-white/60 text-sm">Geschäftsführung · Rostock</div></div>
             </div>
         </div>
     </section>
 
     <!-- Vorher / Nachher -->
-    <section id="vorher-nachher" class="bg-cream border-y border-ink/5">
+    <section id="vorher-nachher" class="bg-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
             <div class="max-w-2xl mb-12 fade-up">
-                <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Vorher / Nachher</span>
-                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Ziehen Sie den Regler</h2>
-                <p class="text-ink/70 mt-4 text-lg">Bewegen Sie den Griff, um das Ergebnis unserer Sanierung zu sehen.</p>
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Vorher / Nachher</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-3 leading-tight">Ziehen Sie den Regler</h2>
+                <svg class="brush mt-4" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
+                <p class="text-ink/70 mt-4 text-lg">Bewegen Sie den Griff, um das Ergebnis unserer Sanierungen zu sehen – echte Projekte aus Rostock und Umgebung.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid md:grid-cols-2 gap-6">
                 <div class="fade-up">
                     <div class="ba">
-                        <img class="ba-after"  src="assets/img/ba-terrasse-nachher.jpg" alt="Terrasse nachher">
-                        <img class="ba-before" src="assets/img/ba-terrasse-vorher.jpg"  alt="Terrasse vorher">
-                        <span class="ba-tag ba-tag-v">Vorher</span>
-                        <span class="ba-tag ba-tag-n">Nachher</span>
-                        <div class="ba-line"></div>
-                        <div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <img class="ba-after" src="assets/img/ba-terrasse-nachher.jpg" alt="Terrasse nachher"><img class="ba-before" src="assets/img/ba-terrasse-vorher.jpg" alt="Terrasse vorher">
+                        <span class="ba-tag ba-tag-v">Vorher</span><span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div><div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
                         <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Terrasse">
                     </div>
                     <h3 class="font-display font-bold text-navy mt-4">Terrassensanierung</h3>
                 </div>
                 <div class="fade-up">
                     <div class="ba">
-                        <img class="ba-after"  src="assets/img/ba-treppe-nachher.jpg" alt="Treppe nachher">
-                        <img class="ba-before" src="assets/img/ba-treppe-vorher.jpg"  alt="Treppe vorher">
-                        <span class="ba-tag ba-tag-v">Vorher</span>
-                        <span class="ba-tag ba-tag-n">Nachher</span>
-                        <div class="ba-line"></div>
-                        <div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <img class="ba-after" src="assets/img/ba-treppe-nachher.jpg" alt="Treppe nachher"><img class="ba-before" src="assets/img/ba-treppe-vorher.jpg" alt="Treppe vorher">
+                        <span class="ba-tag ba-tag-v">Vorher</span><span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div><div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
                         <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Treppe">
                     </div>
-                    <h3 class="font-display font-bold text-navy mt-4">Treppe / Podest</h3>
+                    <h3 class="font-display font-bold text-navy mt-4">Treppensanierung</h3>
                 </div>
                 <div class="fade-up">
                     <div class="ba">
-                        <img class="ba-after"  src="assets/img/ba-brand-nachher.jpg" alt="Mauerwerk nachher">
-                        <img class="ba-before" src="assets/img/ba-brand-vorher.jpg"  alt="Mauerwerk vorher">
-                        <span class="ba-tag ba-tag-v">Vorher</span>
-                        <span class="ba-tag ba-tag-n">Nachher</span>
-                        <div class="ba-line"></div>
-                        <div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
-                        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Mauerwerk">
+                        <img class="ba-after" src="assets/img/ba-eingang-nachher.jpg" alt="Eingangstreppe nachher"><img class="ba-before" src="assets/img/ba-eingang-vorher.jpg" alt="Eingangstreppe vorher">
+                        <span class="ba-tag ba-tag-v">Vorher</span><span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div><div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Eingangstreppe">
+                    </div>
+                    <h3 class="font-display font-bold text-navy mt-4">Eingangs­stufen / Podest</h3>
+                </div>
+                <div class="fade-up">
+                    <div class="ba">
+                        <img class="ba-after" src="assets/img/ba-brand-nachher.jpg" alt="Mauerwerk nach Brandsanierung"><img class="ba-before" src="assets/img/ba-brand-vorher.jpg" alt="Mauerwerk mit Brandschaden">
+                        <span class="ba-tag ba-tag-v">Vorher</span><span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div><div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Brandschaden">
                     </div>
                     <h3 class="font-display font-bold text-navy mt-4">Brandschaden-Sanierung</h3>
                 </div>
@@ -357,38 +396,93 @@
         </div>
     </section>
 
-    <!-- Referenzen (randloses Foto-Mosaik) -->
-    <section id="referenzen" class="bg-white">
+    <!-- Referenzen (randloses Mosaik) -->
+    <section id="referenzen" class="bg-cream border-t border-ink/5">
         <div class="max-w-7xl mx-auto px-6 md:px-8 pt-20 md:pt-28 pb-12">
             <div class="flex flex-wrap items-end justify-between gap-6 fade-up">
                 <div class="max-w-2xl">
-                    <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Referenzen</span>
-                    <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Einblicke in unsere Arbeit</h2>
+                    <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Referenzen</span>
+                    <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-3 leading-tight">Einblicke in unsere Arbeit</h2>
+                    <svg class="brush mt-4" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
                 </div>
-                <p class="text-ink/70 max-w-sm">Besuchen Sie gerne unsere Social-Media-Kanäle für weitere Referenzen.</p>
+                <p class="text-ink/70 max-w-sm">Besuchen Sie gerne unsere Social-Media-Kanäle für weitere Referenzen aus Rostock und Mecklenburg-Vorpommern.</p>
             </div>
         </div>
-        <!-- Vollflächiges Mosaik -->
         <div class="mosaic">
             <figure class="m-tile m-tall fade-up"><img src="assets/img/ref-fassade-farbanstrich.jpg" alt="Fassade mit Farbanstrich"><figcaption>Fassade mit Farbanstrich</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-maler.jpg" alt="Malerarbeiten"><figcaption>Malerarbeiten</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-sanitaer.jpg" alt="Sanitärinstallation"><figcaption>Sanitärinstallation</figcaption></figure>
             <figure class="m-tile m-tall fade-up"><img src="assets/img/ref-bad.jpg" alt="Bad-Sanierung"><figcaption>Bad-Sanierung</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-heizung.jpg" alt="Heizungsmontage"><figcaption>Heizungsmontage</figcaption></figure>
-            <figure class="m-tile fade-up"><img src="assets/img/ref-laminat.jpg" alt="Verlegen von Laminat"><figcaption>Verlegen von Laminat</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-dach.jpg" alt="Dachdeckerarbeiten"><figcaption>Dachdeckerarbeiten</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/ref-wdvs.jpg" alt="Fassade / WDVS"><figcaption>Fassade / WDVS</figcaption></figure>
             <figure class="m-tile m-tall fade-up"><img src="assets/img/mos-bad1.jpg" alt="Badezimmer"><figcaption>Badezimmer</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-fliesen.jpg" alt="Fliesenarbeiten"><figcaption>Fliesenarbeiten</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-thermografie.jpg" alt="Feuchtemessung / Thermografie"><figcaption>Leckortung</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-laminat.jpg" alt="Verlegen von Laminat"><figcaption>Laminat verlegen</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-maler2.jpg" alt="Malerarbeiten Wand"><figcaption>Wandgestaltung</figcaption></figure>
+            <figure class="m-tile m-tall fade-up"><img src="assets/img/mos-fassade.jpg" alt="Fassade mit Gerüst"><figcaption>Fassadenarbeiten</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-boden.jpg" alt="Bodenbelag"><figcaption>Bodenbelag</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/ref-treppe.jpg" alt="Treppensanierung"><figcaption>Treppensanierung</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-tuer.jpg" alt="Tür- und Holzarbeiten"><figcaption>Holz &amp; Türen</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-giebel.jpg" alt="Giebel und Fenster"><figcaption>Fenstermontage</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-install.jpg" alt="Installation"><figcaption>Installation</figcaption></figure>
-            <figure class="m-tile fade-up"><img src="assets/img/ref-fassade-2.jpg" alt="Fassade"><figcaption>Fassade</figcaption></figure>
             <figure class="m-tile fade-up"><img src="assets/img/mos-bad2.jpg" alt="Waschbecken"><figcaption>Waschbecken</figcaption></figure>
-            <figure class="m-tile fade-up"><img src="assets/img/ref-terrasse.jpg" alt="Terrasse"><figcaption>Terrasse</figcaption></figure>
-            <figure class="m-tile fade-up"><img src="assets/img/ref-mauerwerk.jpg" alt="Mauerwerk"><figcaption>Mauerwerk</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-ziegel.jpg" alt="Mauerwerk"><figcaption>Mauerwerk</figcaption></figure>
         </div>
-        <div class="max-w-7xl mx-auto px-6 md:px-8 pt-5 pb-4">
-            <p class="text-xs text-stone">Echte Referenzfotos von Nord-Montage.</p>
+        <div class="max-w-7xl mx-auto px-6 md:px-8 pt-5 pb-4"><p class="text-xs text-stone">Echte Referenzfotos von Nord-Montage.</p></div>
+    </section>
+
+    <!-- Stellenausschreibung -->
+    <section id="stellen" class="bg-navy text-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-10 items-start">
+            <div class="lg:col-span-5 fade-up">
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Stellenangebote · Jobs in Rostock</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 leading-tight">Wir suchen Dich!</h2>
+                <p class="text-white/75 text-lg mt-4">Werde Teil unseres Teams als <strong class="text-white">Trocknungstechniker (m/w/d)</strong> in Rostock. Unbefristet, sicher und mit spannenden Bauprojekten.</p>
+                <div class="mt-6 rounded-xl overflow-hidden border border-white/10">
+                    <img src="assets/img/stellen-poster.jpg" alt="Stellenanzeige Trocknungstechniker m/w/d bei Nord-Montage" class="w-full object-cover">
+                </div>
+                <a href="mailto:info@nord-montage.de?subject=Bewerbung%20Trocknungstechniker" class="btn-arrow inline-flex items-center gap-2 mt-6 bg-signal text-white px-6 py-3 rounded font-medium hover:bg-red-700 transition">
+                    Jetzt bewerben
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+                </a>
+            </div>
+            <div class="lg:col-span-7 fade-up grid sm:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="font-display font-bold text-signal mb-3">Deine Aufgaben</h3>
+                    <ul class="space-y-2 text-white/75 text-sm list-disc list-inside">
+                        <li>Bedienung der Trocknungsgeräte</li>
+                        <li>Feuchtigkeitsmessungen</li>
+                        <li>Überwachung der Trocknungsprozesse</li>
+                        <li>Auf- und Abbau der Geräte</li>
+                        <li>Kundenberatung vor Ort</li>
+                        <li>Berichte &amp; Protokolle</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-signal mb-3">Dein Profil</h3>
+                    <ul class="space-y-2 text-white/75 text-sm list-disc list-inside">
+                        <li>Handwerkliche Ausbildung (bevorzugt)</li>
+                        <li>Technisches Verständnis &amp; Geschick</li>
+                        <li>Serviceorientierter Umgang mit Kunden</li>
+                        <li>Selbstständige, zuverlässige Arbeitsweise</li>
+                        <li>Führerschein Klasse B</li>
+                        <li>PC-Kenntnisse</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-display font-bold text-signal mb-3">Wir bieten</h3>
+                    <ul class="space-y-2 text-white/75 text-sm list-disc list-inside">
+                        <li>Unbefristeter, sicherer Job</li>
+                        <li>Geregelte Arbeitszeiten</li>
+                        <li>Attraktive Vergütung</li>
+                        <li>Firmenwagen &amp; Firmenhandy</li>
+                        <li>Hochwertige Arbeitskleidung</li>
+                        <li>Eingespieltes Team &amp; Entwicklung</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -396,16 +490,17 @@
     <section id="faq" class="bg-cream border-y border-ink/5">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 grid lg:grid-cols-12 gap-10">
             <div class="lg:col-span-4 fade-up">
-                <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">FAQ</span>
-                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Häufige Fragen</h2>
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">FAQ</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-3 leading-tight">Häufige Fragen</h2>
+                <svg class="brush mt-4" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
                 <p class="text-ink/70 mt-5">Ihre Frage ist nicht dabei? <a href="#kontakt" class="text-signal font-medium underline">Sprechen Sie uns an.</a></p>
             </div>
             <div class="lg:col-span-8 fade-up">
                 <div class="border-t border-ink/15">
-                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-semibold text-navy">Übernehmen Sie wirklich alle Gewerke selbst?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Ja. Unser Team führt alle erforderlichen Handwerksarbeiten selbst aus – von der Trocknung über Sanitär, Fassade und Boden bis zur Wiederherstellung. Sie haben einen Ansprechpartner statt vieler Gewerke.</p></div></div>
-                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-semibold text-navy">Wie schnell können Sie bei einem Wasserschaden vor Ort sein?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Melden Sie den Schaden telefonisch – wir stimmen umgehend einen Termin zur Begutachtung und, wenn nötig, zur sofortigen technischen Trocknung ab.</p></div></div>
-                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-semibold text-navy">In welchem Gebiet sind Sie tätig?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Wir sind in Rostock und der Umgebung für Sie im Einsatz. Unser Standort liegt in der Albert-Schweitzer-Str. 24a in 18147 Rostock.</p></div></div>
-                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-semibold text-navy">Was kostet eine Erstberatung?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Wir erstellen Ihnen ein kostenloses Angebot. Sprechen Sie uns einfach an – telefonisch, per E-Mail oder über das Kontaktformular.</p></div></div>
+                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-medium text-navy">Übernehmen Sie wirklich alle Gewerke selbst?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Ja. Unser Team führt alle erforderlichen Handwerksarbeiten selbst aus – von der Trocknung über Sanitär, Fassade und Boden bis zur Wiederherstellung. Sie haben einen Ansprechpartner statt vieler Gewerke.</p></div></div>
+                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-medium text-navy">In welchem Gebiet sind Sie tätig?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Wir sind in Rostock, im gesamten Landkreis Rostock und in ganz Mecklenburg-Vorpommern für Sie im Einsatz – unser Standort ist in der Albert-Schweitzer-Str. 24a in 18147 Rostock.</p></div></div>
+                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-medium text-navy">Wie schnell können Sie bei einem Wasserschaden vor Ort sein?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Melden Sie den Schaden telefonisch – wir stimmen umgehend einen Termin zur Begutachtung und, wenn nötig, zur sofortigen technischen Trocknung ab.</p></div></div>
+                    <div class="faq-item border-b border-ink/15"><button class="faq-q w-full flex items-center justify-between gap-4 text-left py-6" aria-expanded="false"><span class="font-display text-lg md:text-xl font-medium text-navy">Was kostet eine Erstberatung?</span><svg class="faq-icon w-6 h-6 text-signal shrink-0 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/></svg></button><div class="faq-a"><p class="text-ink/70 pb-6 max-w-2xl">Wir erstellen Ihnen ein kostenloses Angebot. Sprechen Sie uns einfach an – telefonisch, per E-Mail oder über das Kontaktformular.</p></div></div>
                 </div>
             </div>
         </div>
@@ -415,8 +510,8 @@
     <section class="bg-signal text-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
-                <h2 class="font-display text-3xl md:text-4xl font-bold uppercase">Schaden entstanden? Sprechen Sie uns an.</h2>
-                <p class="text-white/85 mt-3 text-lg">Wir beraten Sie und erstellen ein kostenloses Angebot.</p>
+                <h2 class="font-display text-3xl md:text-4xl font-bold">Schaden entstanden? Sprechen Sie uns an.</h2>
+                <p class="text-white/85 mt-3 text-lg">Kostenloses Angebot für Rostock, Landkreis Rostock &amp; MV.</p>
             </div>
             <a href="tel:+4938151056333" class="btn-arrow shrink-0 inline-flex items-center gap-3 bg-white text-signal px-8 py-4 rounded font-bold text-lg hover:bg-navy hover:text-white transition">
                 0381 51 05 63 33
@@ -429,17 +524,18 @@
     <section id="anfahrt" class="bg-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
             <div class="fade-up">
-                <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Anfahrt</span>
-                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 mb-8 leading-tight uppercase">So finden Sie uns</h2>
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Anfahrt &amp; Einsatzgebiet</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-3 mb-8 leading-tight">So finden Sie uns</h2>
                 <div class="flex items-start gap-4 mb-6">
                     <span class="shrink-0 w-12 h-12 rounded bg-navy flex items-center justify-center text-white"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></span>
                     <div><div class="font-display font-bold text-lg text-navy">Nord-Montage GbR</div><div class="text-ink/70">Albert-Schweitzer-Str. 24a<br>18147 Rostock</div></div>
                 </div>
-                <div class="bg-navy text-white rounded-xl p-6">
+                <div class="bg-navy text-white rounded-xl p-6 mb-6">
                     Sie erreichen uns über die <strong>Toitenwinkler Allee</strong>, biegen dann in die
                     <strong>Salvador-Allende-Straße</strong> ab und folgen der Straße bis zum Parkplatz.
                 </div>
-                <a href="https://www.google.com/maps/search/?api=1&query=Albert-Schweitzer-Str.+24a+18147+Rostock" target="_blank" rel="noopener" class="btn-arrow inline-flex items-center gap-2 mt-6 text-signal font-semibold">In Google Maps öffnen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
+                <p class="text-ink/70"><strong class="text-navy">Einsatzgebiet:</strong> Rostock · Warnemünde · Landkreis Rostock · Bad Doberan · Güstrow · Ribnitz-Damgarten · ganz Mecklenburg-Vorpommern.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Albert-Schweitzer-Str.+24a+18147+Rostock" target="_blank" rel="noopener" class="btn-arrow inline-flex items-center gap-2 mt-6 text-signal font-medium">In Google Maps öffnen <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></a>
             </div>
             <div class="fade-up rounded-xl overflow-hidden border border-ink/10">
                 <iframe title="Karte Nord-Montage GbR Rostock" src="https://www.google.com/maps?q=Albert-Schweitzer-Str.+24a+18147+Rostock&output=embed" class="w-full h-[420px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -451,25 +547,26 @@
     <section id="kontakt" class="bg-cream border-t border-ink/5">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
             <div class="max-w-2xl mb-12 fade-up">
-                <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Kontakt</span>
-                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Sie erreichen uns wie folgt</h2>
+                <span class="text-signal font-medium uppercase tracking-[0.2em] text-xs">Kontakt</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-3 leading-tight">Sie erreichen uns wie folgt</h2>
+                <svg class="brush mt-4" viewBox="0 0 120 14" preserveAspectRatio="none" fill="currentColor" aria-hidden="true"><path d="M2,8 C25,3 60,4 85,6 C100,7 112,4 118,8 C110,12 100,11 85,10 C58,8 25,12 2,8 Z"/></svg>
             </div>
             <div class="grid lg:grid-cols-2 gap-14">
                 <div class="fade-up space-y-10">
                     <div>
                         <h3 class="font-display text-lg font-bold text-navy mb-4">Per Telefon</h3>
                         <ul class="space-y-3">
-                            <li class="flex justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Büro</span><a href="tel:+4938151056333" class="font-semibold text-navy hover:text-signal transition">0381 51 05 63 33</a></li>
-                            <li class="flex justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Herr Jenke</span><a href="tel:+491747869451" class="font-semibold text-navy hover:text-signal transition">0174 78 69 451</a></li>
-                            <li class="flex justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Herr Worm</span><a href="tel:+491731929170" class="font-semibold text-navy hover:text-signal transition">0173 19 29 170</a></li>
+                            <li class="flex justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Büro</span><a href="tel:+4938151056333" class="font-medium text-navy hover:text-signal transition">0381 51 05 63 33</a></li>
+                            <li class="flex justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Herr Jenke</span><a href="tel:+491747869451" class="font-medium text-navy hover:text-signal transition">0174 78 69 451</a></li>
+                            <li class="flex justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Herr Worm</span><a href="tel:+491731929170" class="font-medium text-navy hover:text-signal transition">0173 19 29 170</a></li>
                         </ul>
                     </div>
                     <div>
                         <h3 class="font-display text-lg font-bold text-navy mb-4">Per E-Mail</h3>
                         <ul class="space-y-3">
-                            <li class="flex flex-col sm:flex-row sm:justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Schadenmeldung &amp; Anfragen</span><a href="mailto:info@nord-montage.de" class="font-semibold text-navy hover:text-signal transition break-all">info@nord-montage.de</a></li>
-                            <li class="flex flex-col sm:flex-row sm:justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Geschäftsführung</span><a href="mailto:nordmontagegbr@live.de" class="font-semibold text-navy hover:text-signal transition break-all">nordmontagegbr@live.de</a></li>
-                            <li class="flex flex-col sm:flex-row sm:justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Trocknungsservice</span><a href="mailto:m.balham-nordmontage@web.de" class="font-semibold text-navy hover:text-signal transition break-all">m.balham-nordmontage@web.de</a></li>
+                            <li class="flex flex-col sm:flex-row sm:justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Schadenmeldung &amp; Anfragen</span><a href="mailto:info@nord-montage.de" class="font-medium text-navy hover:text-signal transition break-all">info@nord-montage.de</a></li>
+                            <li class="flex flex-col sm:flex-row sm:justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Geschäftsführung</span><a href="mailto:nordmontagegbr@live.de" class="font-medium text-navy hover:text-signal transition break-all">nordmontagegbr@live.de</a></li>
+                            <li class="flex flex-col sm:flex-row sm:justify-between border-b border-ink/10 pb-3"><span class="text-ink/60">Trocknungsservice</span><a href="mailto:m.balham-nordmontage@web.de" class="font-medium text-navy hover:text-signal transition break-all">m.balham-nordmontage@web.de</a></li>
                         </ul>
                     </div>
                     <div>
@@ -480,7 +577,6 @@
                         </div>
                     </div>
                 </div>
-
                 <form class="fade-up bg-white rounded-xl p-8 border border-ink/10 self-start" onsubmit="event.preventDefault(); this.reset(); document.getElementById('form-ok').classList.remove('hidden');">
                     <div class="grid sm:grid-cols-2 gap-4">
                         <div><label class="block text-sm font-medium mb-1.5 text-navy">Name</label><input required type="text" class="w-full rounded border border-ink/15 px-4 py-3 focus:border-signal focus:ring-1 focus:ring-signal outline-none transition" placeholder="Ihr Name"></div>
@@ -488,7 +584,7 @@
                     </div>
                     <div class="mt-4"><label class="block text-sm font-medium mb-1.5 text-navy">E-Mail</label><input required type="email" class="w-full rounded border border-ink/15 px-4 py-3 focus:border-signal focus:ring-1 focus:ring-signal outline-none transition" placeholder="ihre@email.de"></div>
                     <div class="mt-4"><label class="block text-sm font-medium mb-1.5 text-navy">Ihre Nachricht / Schadenbeschreibung</label><textarea rows="4" class="w-full rounded border border-ink/15 px-4 py-3 focus:border-signal focus:ring-1 focus:ring-signal outline-none transition" placeholder="Beschreiben Sie kurz Ihr Anliegen"></textarea></div>
-                    <button type="submit" class="btn-arrow mt-6 w-full inline-flex items-center justify-center gap-2 bg-signal text-white py-4 rounded font-semibold text-lg hover:bg-red-700 transition">Anfrage senden <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></button>
+                    <button type="submit" class="btn-arrow mt-6 w-full inline-flex items-center justify-center gap-2 bg-signal text-white py-4 rounded font-medium text-lg hover:bg-red-700 transition">Anfrage senden <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H8M17 7v9"/></svg></button>
                     <p id="form-ok" class="hidden text-center text-navy mt-4 font-medium">✓ Vielen Dank! Wir melden uns umgehend bei Ihnen.</p>
                     <p class="text-xs text-stone text-center mt-4">Mit dem Absenden stimmen Sie unserer <a href="datenschutz.html" class="underline">Datenschutzerklärung</a> zu.</p>
                 </form>
@@ -501,26 +597,23 @@
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-16 grid md:grid-cols-4 gap-10">
             <div class="md:col-span-2">
                 <div class="flex items-center gap-3 mb-5">
-                    <svg class="w-10 h-10" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 22 L24 5 L44 22" stroke="#cd111f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
-                        <rect x="9" y="21" width="30" height="19" rx="2.5" fill="#fff"/>
-                        <text x="24" y="35" fill="#111F55" font-size="12.5" font-weight="700" text-anchor="middle" font-family="Space Grotesk, sans-serif">NM</text>
-                    </svg>
+                    <svg class="w-10 h-10" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4 22 L24 5 L44 22" stroke="#cd111f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="21" width="30" height="19" rx="2.5" fill="#fff"/><text x="24" y="35" fill="#111F55" font-size="12.5" font-weight="700" text-anchor="middle" font-family="Ubuntu, sans-serif">NM</text></svg>
                     <span class="font-display text-xl font-bold text-white">Nord-<span class="text-signal">Montage</span> GbR</span>
                 </div>
-                <p class="max-w-sm text-white/60">Professionelle Sanierung von Wasser-, Brand-, Schimmel- &amp; Sturmschäden in Rostock und Umgebung. Alle Gewerke aus einer Hand.</p>
+                <p class="max-w-md text-white/60">Sanierung von Wasser-, Brand-, Schimmel- &amp; Sturmschäden, technische Trocknung und alle Gewerke aus einer Hand – in Rostock, im Landkreis Rostock und in ganz Mecklenburg-Vorpommern.</p>
             </div>
             <div>
-                <h4 class="font-display text-base font-bold text-white mb-4">Leistungen</h4>
+                <h3 class="font-display text-base font-bold text-white mb-4">Leistungen</h3>
                 <ul class="space-y-2.5 text-sm">
-                    <li><a href="#leistungen" class="hover:text-signal transition">Schadensanierung</a></li>
-                    <li><a href="#leistungen" class="hover:text-signal transition">Fassade &amp; WDVS</a></li>
-                    <li><a href="#leistungen" class="hover:text-signal transition">Heizung &amp; Sanitär</a></li>
-                    <li><a href="#leistungen" class="hover:text-signal transition">Boden, Fliesen &amp; Maler</a></li>
+                    <li><a href="#leistungen" class="hover:text-signal transition">Wasserschadensanierung</a></li>
+                    <li><a href="#leistungen" class="hover:text-signal transition">Technische Trocknung</a></li>
+                    <li><a href="#leistungen" class="hover:text-signal transition">Brand- &amp; Schimmelsanierung</a></li>
+                    <li><a href="#leistungen" class="hover:text-signal transition">Fassade, WDVS &amp; Dach</a></li>
+                    <li><a href="#stellen" class="hover:text-signal transition">Stellenangebote</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-display text-base font-bold text-white mb-4">Kontakt</h4>
+                <h3 class="font-display text-base font-bold text-white mb-4">Kontakt</h3>
                 <ul class="space-y-2.5 text-sm">
                     <li><a href="tel:+4938151056333" class="hover:text-signal transition">0381 51 05 63 33</a></li>
                     <li><a href="mailto:info@nord-montage.de" class="hover:text-signal transition">info@nord-montage.de</a></li>
@@ -530,7 +623,7 @@
         </div>
         <div class="border-t border-white/10">
             <div class="max-w-7xl mx-auto px-6 md:px-8 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/50">
-                <span>© 2026 Nord-Montage GbR. Alle Rechte vorbehalten.</span>
+                <span>© 2026 Nord-Montage GbR · Rostock &amp; Mecklenburg-Vorpommern</span>
                 <div class="flex gap-6"><a href="impressum.html" class="hover:text-white transition">Impressum</a><a href="datenschutz.html" class="hover:text-white transition">Datenschutz</a></div>
             </div>
         </div>
@@ -552,7 +645,6 @@
             });
         });
 
-        // Vorher/Nachher-Wischregler
         document.querySelectorAll('.ba').forEach(ba => {
             const range = ba.querySelector('.ba-range');
             const set = v => ba.style.setProperty('--pos', v + '%');
@@ -562,7 +654,7 @@
 
         const io = new IntersectionObserver((entries) => {
             entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-        }, { threshold: 0.12 });
+        }, { threshold: 0.1 });
         document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
     </script>
 </body>
