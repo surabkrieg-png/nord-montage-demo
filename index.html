@@ -44,6 +44,18 @@
         .ba .ba-tag { position:absolute; top:12px; padding:4px 10px; border-radius:4px; font-size:12px; font-weight:600; letter-spacing:.03em; color:#fff; pointer-events:none; }
         .ba .ba-tag-v { left:12px; background:rgba(14,22,51,.85); }
         .ba .ba-tag-n { right:12px; background:rgba(205,17,31,.9); }
+        /* Foto-Mosaik (randlos, Masonry) */
+        .mosaic { display:grid; grid-template-columns:repeat(2,1fr); grid-auto-rows:44vw; gap:4px; }
+        @media (min-width:768px){ .mosaic{ grid-template-columns:repeat(4,1fr); grid-auto-rows:15vw; } }
+        .m-tile { position:relative; overflow:hidden; }
+        .m-tile img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+        .m-tile:hover img { transform:scale(1.07); }
+        .m-tile figcaption { position:absolute; inset-inline:0; bottom:0; padding:.6rem .75rem; font-size:12px; font-weight:600; color:#fff; background:linear-gradient(to top, rgba(17,31,85,.85), transparent); opacity:0; transition:opacity .3s ease; }
+        .m-tile:hover figcaption { opacity:1; }
+        .m-tall { grid-row:span 2; }
+        @media (max-width:767px){ .m-tall{ grid-row:span 1; } }
+        /* Pinselstrich */
+        .brush-bg { position:absolute; z-index:0; pointer-events:none; }
     </style>
 </head>
 <body class="bg-white text-ink antialiased">
@@ -258,8 +270,30 @@
         </div>
     </section>
 
+    <!-- Zitat / Familienbetrieb (Pinselstrich) -->
+    <section class="bg-navy text-white relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 md:px-8 py-24 md:py-28 text-center relative">
+            <svg class="brush-bg left-1/2 top-1/2" style="transform:translate(-50%,-58%);width:min(760px,92%);height:auto;opacity:.9" viewBox="0 0 600 220" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M22,120 C70,58 190,52 320,72 C440,90 520,55 582,104 C566,158 430,168 300,150 C176,133 66,164 22,120 Z" fill="#cd111f" opacity="0.16"/>
+            </svg>
+            <span class="relative text-signal font-semibold uppercase tracking-[0.22em] text-xs">Familienbetrieb aus Rostock</span>
+            <blockquote class="relative font-display text-2xl md:text-4xl font-semibold italic leading-snug mt-6">
+                „Wir vereinen alle Gewerke unter einem Dach – von der Trocknung bis zur Wiederherstellung. Damit Sie einen Ansprechpartner haben und wir für das Ergebnis geradestehen.“
+            </blockquote>
+            <div class="relative mt-9 flex items-center justify-center gap-4">
+                <span class="w-14 h-14 rounded-full overflow-hidden ring-2 ring-signal shrink-0">
+                    <img src="assets/img/ref-arbeiten.jpg" alt="Nord-Montage Team" class="w-full h-full object-cover">
+                </span>
+                <div class="text-left">
+                    <div class="font-semibold">Nord-Montage GbR</div>
+                    <div class="text-white/60 text-sm">Geschäftsführung · Rostock</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Prozess (dunkel) -->
-    <section class="bg-navy text-white">
+    <section class="bg-navy text-white border-t border-white/10">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
             <div class="max-w-2xl mb-14 fade-up">
                 <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Ablauf</span>
@@ -323,27 +357,38 @@
         </div>
     </section>
 
-    <!-- Referenzen -->
+    <!-- Referenzen (randloses Foto-Mosaik) -->
     <section id="referenzen" class="bg-white">
-        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
-            <div class="flex flex-wrap items-end justify-between gap-6 mb-12 fade-up">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 pt-20 md:pt-28 pb-12">
+            <div class="flex flex-wrap items-end justify-between gap-6 fade-up">
                 <div class="max-w-2xl">
                     <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Referenzen</span>
-                    <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Ausgewählte Projekte</h2>
+                    <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Einblicke in unsere Arbeit</h2>
                 </div>
                 <p class="text-ink/70 max-w-sm">Besuchen Sie gerne unsere Social-Media-Kanäle für weitere Referenzen.</p>
             </div>
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-fassade-farbanstrich.jpg" alt="Fassade mit Farbanstrich" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Fassade mit Farbanstrich</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-wdvs.jpg" alt="Fassade / WDVS" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Fassade / WDVS</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-treppe.jpg" alt="Treppensanierung" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Treppensanierung</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-bad.jpg" alt="Bad-Sanierung" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Bad-Sanierung</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-laminat.jpg" alt="Verlegen von Laminat" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Verlegen von Laminat</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-sanitaer-3.jpg" alt="Sanitärinstallation" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Sanitärinstallation</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-mauerwerk.jpg" alt="Mauerwerk / Schornstein" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Mauerwerk / Schornstein</figcaption></figure>
-                <figure class="fade-up group relative overflow-hidden rounded-lg aspect-[4/3]"><img src="assets/img/ref-terrasse.jpg" alt="Terrasse" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"><figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/90 to-transparent text-white text-sm font-medium p-3">Terrasse</figcaption></figure>
-            </div>
-            <p class="text-xs text-stone mt-4">Echte Referenzfotos von Nord-Montage.</p>
+        </div>
+        <!-- Vollflächiges Mosaik -->
+        <div class="mosaic">
+            <figure class="m-tile m-tall fade-up"><img src="assets/img/ref-fassade-farbanstrich.jpg" alt="Fassade mit Farbanstrich"><figcaption>Fassade mit Farbanstrich</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-maler.jpg" alt="Malerarbeiten"><figcaption>Malerarbeiten</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-sanitaer.jpg" alt="Sanitärinstallation"><figcaption>Sanitärinstallation</figcaption></figure>
+            <figure class="m-tile m-tall fade-up"><img src="assets/img/ref-bad.jpg" alt="Bad-Sanierung"><figcaption>Bad-Sanierung</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-heizung.jpg" alt="Heizungsmontage"><figcaption>Heizungsmontage</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-laminat.jpg" alt="Verlegen von Laminat"><figcaption>Verlegen von Laminat</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-wdvs.jpg" alt="Fassade / WDVS"><figcaption>Fassade / WDVS</figcaption></figure>
+            <figure class="m-tile m-tall fade-up"><img src="assets/img/mos-bad1.jpg" alt="Badezimmer"><figcaption>Badezimmer</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-fliesen.jpg" alt="Fliesenarbeiten"><figcaption>Fliesenarbeiten</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-boden.jpg" alt="Bodenbelag"><figcaption>Bodenbelag</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-treppe.jpg" alt="Treppensanierung"><figcaption>Treppensanierung</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-install.jpg" alt="Installation"><figcaption>Installation</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-fassade-2.jpg" alt="Fassade"><figcaption>Fassade</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/mos-bad2.jpg" alt="Waschbecken"><figcaption>Waschbecken</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-terrasse.jpg" alt="Terrasse"><figcaption>Terrasse</figcaption></figure>
+            <figure class="m-tile fade-up"><img src="assets/img/ref-mauerwerk.jpg" alt="Mauerwerk"><figcaption>Mauerwerk</figcaption></figure>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 md:px-8 pt-5 pb-4">
+            <p class="text-xs text-stone">Echte Referenzfotos von Nord-Montage.</p>
         </div>
     </section>
 
