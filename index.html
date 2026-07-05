@@ -34,6 +34,16 @@
         .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
         .col-img { transition: transform .5s ease; }
         .col-tile:hover .col-img { transform: scale(1.06); }
+        /* Vorher/Nachher-Wischregler */
+        .ba { position:relative; aspect-ratio:4/3; overflow:hidden; border-radius:.75rem; user-select:none; --pos:50%; }
+        .ba img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; pointer-events:none; }
+        .ba .ba-before { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+        .ba .ba-line { position:absolute; top:0; bottom:0; left:var(--pos); width:3px; background:#fff; transform:translateX(-50%); pointer-events:none; box-shadow:0 0 0 1px rgba(0,0,0,.15); }
+        .ba .ba-handle { position:absolute; top:50%; left:var(--pos); width:46px; height:46px; border-radius:9999px; background:#cd111f; transform:translate(-50%,-50%); display:flex; align-items:center; justify-content:center; color:#fff; box-shadow:0 6px 16px rgba(0,0,0,.35); pointer-events:none; }
+        .ba .ba-range { position:absolute; inset:0; width:100%; height:100%; margin:0; opacity:0; cursor:ew-resize; }
+        .ba .ba-tag { position:absolute; top:12px; padding:4px 10px; border-radius:4px; font-size:12px; font-weight:600; letter-spacing:.03em; color:#fff; pointer-events:none; }
+        .ba .ba-tag-v { left:12px; background:rgba(14,22,51,.85); }
+        .ba .ba-tag-n { right:12px; background:rgba(205,17,31,.9); }
     </style>
 </head>
 <body class="bg-white text-ink antialiased">
@@ -67,8 +77,8 @@
 
             <nav class="hidden lg:flex items-center gap-8 font-medium text-[15px] text-ink/80">
                 <a href="#leistungen" class="hover:text-signal transition">Leistungsprofil</a>
+                <a href="#vorher-nachher" class="hover:text-signal transition">Vorher / Nachher</a>
                 <a href="#referenzen" class="hover:text-signal transition">Referenzen</a>
-                <a href="#faq" class="hover:text-signal transition">FAQ</a>
                 <a href="#anfahrt" class="hover:text-signal transition">Anfahrt</a>
                 <a href="#kontakt" class="hover:text-signal transition">Kontakt</a>
             </nav>
@@ -264,6 +274,55 @@
         </div>
     </section>
 
+    <!-- Vorher / Nachher -->
+    <section id="vorher-nachher" class="bg-cream border-y border-ink/5">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
+            <div class="max-w-2xl mb-12 fade-up">
+                <span class="text-signal font-semibold uppercase tracking-[0.2em] text-xs">Vorher / Nachher</span>
+                <h2 class="font-display text-3xl md:text-5xl font-bold text-navy mt-4 leading-tight uppercase">Ziehen Sie den Regler</h2>
+                <p class="text-ink/70 mt-4 text-lg">Bewegen Sie den Griff, um das Ergebnis unserer Sanierung zu sehen.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="fade-up">
+                    <div class="ba">
+                        <img class="ba-after"  src="assets/img/ba-terrasse-nachher.jpg" alt="Terrasse nachher">
+                        <img class="ba-before" src="assets/img/ba-terrasse-vorher.jpg"  alt="Terrasse vorher">
+                        <span class="ba-tag ba-tag-v">Vorher</span>
+                        <span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div>
+                        <div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Terrasse">
+                    </div>
+                    <h3 class="font-display font-bold text-navy mt-4">Terrassensanierung</h3>
+                </div>
+                <div class="fade-up">
+                    <div class="ba">
+                        <img class="ba-after"  src="assets/img/ba-treppe-nachher.jpg" alt="Treppe nachher">
+                        <img class="ba-before" src="assets/img/ba-treppe-vorher.jpg"  alt="Treppe vorher">
+                        <span class="ba-tag ba-tag-v">Vorher</span>
+                        <span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div>
+                        <div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Treppe">
+                    </div>
+                    <h3 class="font-display font-bold text-navy mt-4">Treppe / Podest</h3>
+                </div>
+                <div class="fade-up">
+                    <div class="ba">
+                        <img class="ba-after"  src="assets/img/ba-brand-nachher.jpg" alt="Mauerwerk nachher">
+                        <img class="ba-before" src="assets/img/ba-brand-vorher.jpg"  alt="Mauerwerk vorher">
+                        <span class="ba-tag ba-tag-v">Vorher</span>
+                        <span class="ba-tag ba-tag-n">Nachher</span>
+                        <div class="ba-line"></div>
+                        <div class="ba-handle"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div>
+                        <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher: Mauerwerk">
+                    </div>
+                    <h3 class="font-display font-bold text-navy mt-4">Brandschaden-Sanierung</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Referenzen -->
     <section id="referenzen" class="bg-white">
         <div class="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
@@ -446,6 +505,14 @@
                 panel.style.maxHeight = open ? null : panel.scrollHeight + 'px';
                 btn.querySelector('.faq-icon').style.transform = open ? 'rotate(0deg)' : 'rotate(45deg)';
             });
+        });
+
+        // Vorher/Nachher-Wischregler
+        document.querySelectorAll('.ba').forEach(ba => {
+            const range = ba.querySelector('.ba-range');
+            const set = v => ba.style.setProperty('--pos', v + '%');
+            set(range.value);
+            range.addEventListener('input', () => set(range.value));
         });
 
         const io = new IntersectionObserver((entries) => {
